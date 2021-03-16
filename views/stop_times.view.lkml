@@ -7,6 +7,12 @@ view: stop_times {
     sql: ${TABLE}.arrival_time ;;
   }
 
+  dimension: arrivaltest {
+    type: string
+    sql: ${TABLE}.arrival_time ;;
+    # value_format: "00,00,00.00"
+  }
+
   dimension_group: departure {
     type: time
     sql: ${TABLE}.departure_time ;;
