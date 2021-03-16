@@ -15,7 +15,7 @@ view: real_time_de_lijn {
   }
 
   dimension: stopid {
-    type: number
+    type: string
     value_format_name: id
     # hidden: yes
     sql: ${TABLE}.stopid ;;
@@ -35,5 +35,9 @@ view: real_time_de_lijn {
   measure: count {
     type: count
     drill_fields: [id, stops.stop_id, stops.stop_name, trips.trip_id]
+  }
+  measure: count_delay {
+    type:  sum
+    sql: ${delay} ;;
   }
 }

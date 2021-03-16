@@ -4,29 +4,11 @@ view: stop_times {
 
   dimension_group: arrival {
     type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
     sql: ${TABLE}.arrival_time ;;
   }
 
   dimension_group: departure {
     type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
     sql: ${TABLE}.departure_time ;;
   }
 

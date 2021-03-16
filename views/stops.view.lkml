@@ -59,6 +59,11 @@ view: stops {
     sql: ${TABLE}.zone_id ;;
   }
 
+  dimension: lat_long {
+    type:  location
+    sql_latitude: ${stop_lat} ;;
+    sql_longitude: ${stop_lon}  ;;
+  }
   measure: count {
     type: count
     drill_fields: [stop_id, stop_name, real_time_de_lijn.count, stop_times.count]
